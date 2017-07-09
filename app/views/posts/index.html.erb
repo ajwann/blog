@@ -1,21 +1,21 @@
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title.html_safe %></td>
-      <td><%= post.text.html_safe %></td>
-      <% if admin_signed_in? %>
-        <td><%= link_to 'Show', post_path(post) %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post_path(post),
-                                   method: :delete,
-                                   data: { confirm: 'Are you sure?' } %>
-      <% end %>
-      </td>
-    </tr>
+<% @posts.each do |post| %>
+
+  <div class="row">
+    <h3><%= post.title.html_safe %></h3>
+  </div>
+
+  <div class="row">
+    <%= post.text.html_safe %>
+  </div>
+
+  <% if admin_signed_in? %>
+      <div class="row">
+      <%= link_to 'Show', post_path(post) %>&nbsp
+      <%= link_to 'Edit', edit_post_path(post) %>&nbsp
+      <%= link_to 'Destroy', post_path(post),
+                             method: :delete,
+                             data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
-</table>
+
+<% end %>
