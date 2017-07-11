@@ -1,16 +1,14 @@
 <div class="row">
-  <h3><%= @post.title.html_safe %></h3>
-</div>
-
-<div class="row">
-  <%= @post.text.html_safe %>
-</div>
-
-<% if admin_signed_in? %>
-    <div class="row">
-    <%= link_to 'Edit', edit_post_path(@post) %>&nbsp
-    <%= link_to 'Destroy', post_path(@post),
-                           method: :delete,
-                           data: { confirm: 'Are you sure?' } %>
+  <div class="col-sm-12">
+    <h3><%= @post.title.html_safe %></h3>
+    <%= @post.text.html_safe %>
+    <% if admin_signed_in? %>
+      &nbsp
+      <br>
+      <%= link_to 'Edit', edit_post_path(@post) %>&nbsp
+      <%= link_to 'Destroy', post_path(@post),
+                             method: :delete,
+                             data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </div>
-<% end %>
+</div>
