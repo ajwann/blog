@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#vendored libraries
+#highlight.js v9.12.0
 
 gem 'rails', github: 'rails/rails'
 gem 'pg', '~> 0.18'
@@ -19,6 +21,7 @@ gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'jquery-rails'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'pry'
@@ -33,5 +36,4 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

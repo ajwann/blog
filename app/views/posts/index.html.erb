@@ -1,9 +1,7 @@
 <% @posts.each do |post| %>
 <div class="row">
   <div class="col-sm-12">
-    <h3><%= post.title.html_safe %></h3>
-    <p><small><%= post.created_at.strftime('%Y-%m-%d') %></small></p>
-    <%= post.text.html_safe %>
+    <%= render 'post', post: post %>
     <% if admin_signed_in? %>
       &nbsp
       <br>
