@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :edit, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc).all
   end
 
   def show
