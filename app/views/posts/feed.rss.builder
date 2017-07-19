@@ -13,7 +13,7 @@ xml.rss :version => "2.0" do
       xml.item do
 
         if post.title
-          xml.title post.title
+          xml.title markdown.render(post.title)
         else
           xml.title "Untitled"
         end
@@ -22,7 +22,7 @@ xml.rss :version => "2.0" do
         xml.pubDate post.created_at.to_s(:rfc822)
         xml.link post_url(post)
         xml.guid post.id
-        text = post.text
+        text = markdown.render(post.text)
         xml.description "<p>" + text + "</p>"
       end
     end

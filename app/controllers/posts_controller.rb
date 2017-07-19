@@ -3,10 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc).all
-    respond_to do |format|
-      format.html
-      format.rss { render :layout => false  }
-    end
   end
 
   def show
@@ -50,6 +46,13 @@ class PostsController < ApplicationController
     @post.destroy
        
     redirect_to posts_path
+  end
+
+  def feed
+    @posts = Post.order(created_at: :desc).all
+    respond_to do |format|
+      format.rss { render :layout => false  }
+    end
   end
 
   private

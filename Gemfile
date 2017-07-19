@@ -21,6 +21,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'jquery-rails'
 gem 'redcarpet'
+gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'pry'
