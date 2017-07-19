@@ -3,6 +3,10 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc).all
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false  }
+    end
   end
 
   def show
