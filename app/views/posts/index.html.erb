@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-md-12">
     <%= render 'post', post: post %>
     <% if admin_signed_in? %>
       &nbsp

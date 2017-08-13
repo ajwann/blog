@@ -44,14 +44,14 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-       
+
     redirect_to posts_path
   end
 
   def feed
     @posts = Post.order(created_at: :desc).all
     respond_to do |format|
-      format.rss { render :layout => false  }
+      format.atom { render :layout => false  }
     end
   end
 
