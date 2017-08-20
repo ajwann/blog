@@ -1,6 +1,4 @@
 {
-  "name": "blog",
-  "private": true,
   "dependencies": {
     "highlightjs-turbolinks": "^1.0.4"
   }

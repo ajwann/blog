@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require highlight.pack
+//= require highlightjs-turbolinks/lib/highlightjs-turbolinks.js
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
