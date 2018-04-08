@@ -1,27 +1,51 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-4">
     <div class="light-padding-top">
       <%= image_tag "me.jpg", height: "230", width: "230", class: "rounded-circle" %>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div class="light-padding-top">
-      <div class="pull-right">
-        <h1>
-            <%= link_to "A Real #{fa_icon('diamond', title: 'Gem', alt: 'Gem', class: 'text-danger')} of a Blog".html_safe,
-                '/', class:'title-link' %>
-        </h1>
+
+      <div class='pull-right'>
+        <div class='row'>
+          <div class="col-md-12">
+            <div class='pull-right'>
+              <h1>
+                  <%= link_to "A Real #{fa_icon('diamond', title: 'Gem', alt: 'Gem', class: 'text-danger')} of a Blog".html_safe,
+                      '/', class:'title-link' %>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class="col-md-12">
+            <div class='pull-right'>
+              <h5>
+                Blog about Ruby, Rails, and more!
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class="col-md-12">
+            <div class='pull-right'>
+              <span>
+                <i class="fa fa-github fa-3x"    name='GitHub' aria-hidden="true"></i>
+                <i class="fa fa-meetup fa-3x"    name='Meetup' aria-hidden="true"></i>
+                <i class="fa fa-file-text fa-3x" name='Resume' aria-hidden="true"></i>
+                <i class="fa fa-envelope fa-3x"  name='Email'  aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="pull-right">
-        <h5>
-          Blog about Ruby, Rails, and more!
-        </h5>
-      </div>
-      <div class="pull-right">
-        <h6>
-          <%= link_to 'By Adam Wanninger', "https://github.com/ajwann" %>
-        </h6>
-      </div>
+
     </div>
   </div>
 </div>
